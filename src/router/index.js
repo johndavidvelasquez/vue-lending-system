@@ -57,6 +57,11 @@ const Register = () => import('@/views/pages/Register')
 const Users = () => import('@/views/users/Users')
 const User = () => import('@/views/users/User')
 
+// Lending System Routers
+
+// Views - Loan Request
+const LoanRequest = () => import('@/views/loan_request/loan_request')
+
 Vue.use(Router)
 
 export default new Router({
@@ -297,7 +302,13 @@ function configRoutes () {
               component: Modals
             }
           ]
-        }
+        },
+        // Lending system routes
+        {
+          path: 'loan_request',
+          name: 'Loan Request',
+          component: LoanRequest
+        },
       ]
     },
     {
